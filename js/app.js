@@ -1,6 +1,6 @@
 'use strict';
 
-
+alert('hi');
 let mycar = prompt('do you know which my favorite car?');
 console.log (mycar);
 
