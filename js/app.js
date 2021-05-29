@@ -55,7 +55,7 @@ function questionNum3() {
 }
 
 function questionNum4() {
-  let mycontry = prompt('do you i am from amman??');
+  let mycontry = prompt('do you think i am from amman??');
   mycontry=mycontry.toLowerCase();
   // console.log(mycontry);
   if (mycontry === 'yes' || mycontry === 'y') {
