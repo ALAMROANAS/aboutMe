@@ -1,84 +1,92 @@
 'use strict';
 
 
-alert('hi');
-let mycar = prompt('do you know which my favorite car?');
-console.log (mycar);
+let username = prompt('whats your name?');
+alert('welcome' + username);
 
-let counter = 0;
+
+
 let score = 0;
 
 
 
 function questionNum1() {
-  let mycar = prompt('Is BMW is my favorite car?');
-  mycar.toLowerCase();
+  let mycar = prompt(' bmw is my favorite car?');
+  mycar=mycar.toLowerCase();
   if (mycar === 'yes' || mycar === 'y') {
     alert('answer correct');
     score++;
   }else if (mycar === 'no' || mycar === 'n') {
-    console.log('correct answer');
+    alert('incorrect answer');
+    // console.log('correct answer');
   }else{
     alert('answer yes or no');
   }
 }
+
+
 function questionNum2() {
-  let myage = prompt('do you know what is my age?');
-  console.log(myage);
+  let myage = prompt('do you think my age is 35?');
+  myage=myage.toLowerCase();
+  // console.log(myage);
   if (myage === 'yes' || myage === 'y') {
     score++;
     alert('answer correct');
   }else if (myage === 'no' || myage === 'n') {
-
-    console.log('correct answer');
+    alert('you should know');
+    // console.log('correct answer');
   }else{
     alert('answer yes or no');
   }
 }
 function questionNum3() {
-  let mybook = prompt('do you know my book?');
-  console.log(mybook);
-  if (mybook === 'yes' || mybook === 'y') {
+  let lovebirds = prompt('do you think i love birds?');
+  lovebirds=lovebirds.toLowerCase();
+  // console.log(lovebirds);
+  if (lovebirds === 'yes' || lovebirds === 'y') {
     score++;
-    alert('answer correct');
-  }else if (mybook === 'no' || mybook === 'n') {
-    console.log('correct answer');
+    alert('yes i do');
+  }else if (lovebirds === 'no' || lovebirds === 'n') {
+    alert('are you kidding me?');
+    // console.log('correct answer');
   }else{
     alert('answer yes or no');
   }
 }
 
 function questionNum4() {
-  let mycontry = prompt('do you know my contry?');
-  console.log(mycontry);
+  let mycontry = prompt('do you i am from amman??');
+  mycontry=mycontry.toLowerCase();
+  // console.log(mycontry);
   if (mycontry === 'yes' || mycontry === 'y') {
-    score++;
-    alert('answer correct');
+    alert('incorrect answer');
   }else if (mycontry === 'no' || mycontry === 'n') {
-    console.log('correct answer');
+    alert('yes i am from alkarak');
+    score++;
+    // console.log('correct answer');
   }else{
-    alert('answer yes or no');
+    alert('answer yes or ');
   }
 }
 
 function questionNum5() {
-  let myfather = prompt('do you know what is my father name?');
-  console.log(myfather);
-  if (myfather === 'yes' || myfather === 'y') {
+  let games = prompt('do you think i hate games?');
+  games=games.toLowerCase();
+  // console.log(games);
+  if (games === 'yes' || games === 'y') {
+    alert('you dont know nothing about me');
+  }else if (games === 'no' || games === 'n') {
+    alert('lets play pubg together');
     score++;
-    alert('answer correct');
-  }else if (myfather === 'no' || myfather === 'n') {
-    console.log('correct answer');
+    // console.log('correct answer');
   }else{
     alert('answer yes or no');
   }
 }
 
-function questionNum6() {
-
-  let guessnum = null;
-  for (let j=0; j<6; j++){
-    guessnum =prompt('guess my lucky number 1 to 10');
+function questionNum6(){
+  for (let j=0; j<=5; j++){
+    let guessnum =prompt('guess my lucky number from 1 to 10');
     guessnum = Number(guessnum);
     if(guessnum === 8){
       score++;
@@ -89,8 +97,8 @@ function questionNum6() {
     }else if(guessnum > 8){
       alert('to high');
     }
-    if(j === 3){
-      alert('my lucky number is 8');
+    if(j === 5){
+      alert('you lost my lucky number is 8');
     }
   }
 }
@@ -98,21 +106,17 @@ function questionNum6() {
 function questionNum7() {
   let favlanguage = ['css','html','javascript'];
   outerloop : for(let j=0 ; j<6 ; j++){
-    let useranswer =prompt('guess my favourite programming language');
-    for(let j=0 ; j < favlanguage.length ; j++){
-      if(useranswer === favlanguage[j]){
+    let useranswer =prompt('guess my fav programming language');
+    for(let i=0 ; i < favlanguage.length ; i++){
+      if(useranswer === favlanguage[i]){
         score++;
         alert('correct answer');
         break outerloop;
       }
     }
-
-    counter += 1;
-    console.log(counter);
-  }
-  if(counter === 6){
-
-    alert('my favourite language' + favlanguage);
+    if(j===5){
+      alert('you lost my fav language are' + favlanguage);
+    }
   }
   alert(`Your score is ${score} out of 7`);
 }
